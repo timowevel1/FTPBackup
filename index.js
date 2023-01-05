@@ -9,6 +9,7 @@ const { envVal } = require('env-bool');
 (() => {
     if(envVal(process.env.CRON_ENABLED)){
         writeLog("Recurring backups enabled.");
+        triggerBackup()
         if(envVal(process.env.RUN_EVERY_DAY)){
             cron.schedule("0 1 * * *", () => {
                 console.log("sad")
