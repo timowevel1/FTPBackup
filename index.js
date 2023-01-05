@@ -1,5 +1,4 @@
 require("dotenv").config();
-require("./lib/FTPService")
 const cron = require('node-cron');
 const triggerBackup = require("./lib/FTPService");
 const writeLog = require("./lib/LogService");
